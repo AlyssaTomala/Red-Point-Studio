@@ -1,26 +1,72 @@
+<script setup></script>
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <router-view :key="$route.fullPath"></router-view>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
-
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+html {
+  margin: -0.85vh 0.85vh 0.85vh -0.85vh;
+  background-color: #191919;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Gilroy";
+  font-weight: 900;
+  color: #fff;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 48px;
+}
+
+h3 {
+  font-size: 36px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+p {
+  font-family: "Qanelas";
+  font-weight: 400;
+  color: #fff;
+  font-size: 18px;
+}
+</style>
+
+<style scoped>
+* {
+  font-family: "Fafo";
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: "Qanelas";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../src/assets/fonts/QanelasRegular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Qanelas";
+  font-weight: 500;
+  font-style: normal;
+  src: url("../src/assets/fonts/QanelasMedium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-weight: 900;
+  font-style: normal;
+  src: url("../src/assets/fonts/Gilroy-ExtraBold.woff2") format("woff2");
 }
 </style>
