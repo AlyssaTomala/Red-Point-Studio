@@ -4,10 +4,16 @@
 </template>
 
 <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
-  margin: -0.85vh 0.85vh 0.85vh -0.85vh;
   background-color: #191919;
   scroll-behavior: smooth;
+  margin: 0 5%;
 }
 
 h1,
@@ -29,6 +35,7 @@ h2 {
 
 h3 {
   font-size: 36px;
+  padding-bottom: 32px;
 }
 
 h4 {
@@ -40,6 +47,10 @@ p {
   font-weight: 400;
   color: #fff;
   font-size: 18px;
+}
+
+a {
+  text-decoration: none;
 }
 </style>
 
