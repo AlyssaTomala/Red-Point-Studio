@@ -1,14 +1,11 @@
-<script>
-// export default {
-//   components: {},
-//   data() {
-//     return {};
-//   },
-// };
-</script>
+<script></script>
 
 <template>
-  <div>lol</div>
+  <div class="lol">Réservation</div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.lol {
+  background-color: red;
+}
+</style>

@@ -1,11 +1,8 @@
 <script>
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-// import cardsText from "@/components/cardsText.vue";
+
 export default {
-  components: {
-    // cardsText,
-  },
   data() {
     return {};
   },
@@ -142,7 +139,7 @@ export default {
   border: 0.5px solid var(--color-grey-800, #343434);
   background: var(--color-brand-Backgroundblur, rgba(255, 247, 247, 0.08));
   box-shadow: 0px 0px 15.1px 0px rgba(0, 0, 0, 0.15);
-  backdrop-filter: blur(1.9500000476837158px);
+  backdrop-filter: blur(2px);
 }
 
 .card-title {

@@ -35,7 +35,7 @@ h2 {
 
 h3 {
   font-size: 36px;
-  padding-bottom: 32px;
+  padding: 60px 0 32px 0;
 }
 
 h4 {

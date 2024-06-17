@@ -1,0 +1,167 @@
+<script>
+import hoverButton from "@/components/hoverButton.vue";
+
+export default {
+  components: {
+    hoverButton,
+  },
+  props: {
+    textTutorial: {
+      type: String,
+      required: true,
+      default: "Oui",
+    },
+    buttonTextTutorial: {
+      type: String,
+      required: true,
+      default: "essai",
+    },
+    h3Tutorial: {
+      type: String,
+      required: true,
+      default: "essai",
+    },
+  },
+};
+</script>
+<template>
+  <div class="tutorial-container">
+    <div class="tutorial-container-img"></div>
+    <div class="tutorial-container-section">
+      <div class="tutorial-container-text">
+        <div class="tutorial-container-title">
+          <div class="tutorial-title-icon">
+            <svg
+              width="74"
+              height="74"
+              viewBox="0 0 74 74"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g filter="url(#filter0_bd_142_9872)">
+                <rect
+                  x="3"
+                  y="3"
+                  width="67.6"
+                  height="67.6"
+                  rx="33.8"
+                  fill="#FFF7F7"
+                  fill-opacity="0.05"
+                  shape-rendering="crispEdges"
+                />
+              </g>
+              <path
+                d="M38.7493 50.54C36.6151 50.54 34.852 48.7877 34.852 46.6667V43.7157C34.852 39.8424 31.6977 36.8 27.8934 36.8C24.0891 36.8 20.9348 39.8434 20.9348 43.7157V50.54C20.9348 51.6462 21.8629 52.5686 22.976 52.5686C23.9971 52.5686 24.9241 51.6462 24.9241 50.54V43.7157C24.9241 42.0558 26.2233 40.7647 27.8934 40.7647C29.5635 40.7647 30.8626 42.0558 30.8626 43.7157V46.6667C30.8626 51.0012 34.389 54.5047 38.7493 54.5047C43.1097 54.5047 46.729 51.0001 46.729 46.6667V42.7019H42.7397V46.6667C42.7397 48.7877 40.9765 50.54 38.7504 50.54H38.7493ZM36.8012 28.9619V32.8352C36.8012 35.0487 38.5643 36.8 40.7905 36.8V38.7361C40.7905 39.8424 41.6256 40.7647 42.7386 40.7647H46.728C47.7491 40.7647 48.6761 39.8424 48.6761 38.7361V36.8C50.8103 36.8 52.6654 35.0477 52.6654 32.8352V28.9619C52.6654 27.8557 51.7373 26.9333 50.6243 26.9333H38.7472C37.7261 26.9333 36.7991 27.8557 36.7991 28.9619H36.8012ZM46.729 21.0314V24.9961H50.6264V21.0314C50.6264 20.0165 49.7913 19.0952 48.6782 19.0952C47.5651 19.0952 46.73 20.0176 46.73 21.0314H46.729ZM40.7905 19.0952C39.6774 19.0952 38.7493 20.0176 38.7493 21.0314V24.9961H42.7386V21.0314C42.7386 20.0165 41.8105 19.0952 40.7905 19.0952Z"
+                fill="#FFFFF9"
+              />
+              <defs>
+                <filter
+                  id="filter0_bd_142_9872"
+                  x="0.221555"
+                  y="0.221555"
+                  width="73.157"
+                  height="73.157"
+                  filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB"
+                >
+                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feGaussianBlur
+                    in="BackgroundImageFix"
+                    stdDeviation="0.358806"
+                  />
+                  <feComposite
+                    in2="SourceAlpha"
+                    operator="in"
+                    result="effect1_backgroundBlur_142_9872"
+                  />
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha"
+                  />
+                  <feOffset />
+                  <feGaussianBlur stdDeviation="1.38922" />
+                  <feComposite in2="hardAlpha" operator="out" />
+                  <feColorMatrix
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in2="effect1_backgroundBlur_142_9872"
+                    result="effect2_dropShadow_142_9872"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in="SourceGraphic"
+                    in2="effect2_dropShadow_142_9872"
+                    result="shape"
+                  />
+                </filter>
+              </defs>
+            </svg>
+          </div>
+          <h3>{{ h3Tutorial }}</h3>
+        </div>
+        <p>{{ textTutorial }}</p>
+      </div>
+      <hoverButton class="lol">
+        <p>{{ buttonTextTutorial }}</p>
+      </hoverButton>
+    </div>
+  </div>
+</template>
+
+<style>
+.tutorial-container {
+  width: 100%;
+  height: 45vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  border-radius: 10px;
+  background: var(--surface-surface-blur, rgba(255, 247, 247, 0.08));
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(17px);
+}
+
+.tutorial-container-img,
+.tutorial-container-section {
+  margin: 10px 10% 10px 10px;
+  width: 50%;
+}
+
+.tutorial-container-img {
+  width: 40%;
+  background-image: url("@/assets/img/card-img-test.webp");
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+}
+
+.tutorial-container-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.tutorial-container-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.tutorial-container-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 10vh;
+}
+
+.tutorial-container-title h3 {
+  margin-left: 2vw;
+  margin-bottom: 25px;
+}
+</style>

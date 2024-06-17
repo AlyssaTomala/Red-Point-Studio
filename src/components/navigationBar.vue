@@ -134,7 +134,7 @@ export default {
     <div class="navbar-links">
       <effectUnderline navBarText="Tutoriels" navBarUrl="" />
       <effectUnderline navBarText="Réservation" navBarUrl="" />
-      <effectUnderline navBarText="Infos Pratiques" navBarUrl="" />
+      <effectUnderline navBarText="Infos pratiques" navBarUrl="" />
       <effectUnderline navBarText="Sommaire" navBarUrl="" />
     </div>
     <div class="navbar-guest">
@@ -177,6 +177,7 @@ export default {
   height: 7vh;
   width: 100vw;
   position: fixed;
+  z-index: 9999;
   top: 0;
   left: 0;
 }
