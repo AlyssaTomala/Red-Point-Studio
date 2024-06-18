@@ -21,17 +21,35 @@ export default {
       required: true,
       default: "essai",
     },
+    svgIcon: {
+      type: String,
+      default: "",
+    },
+    backgroundImageTutorial: {
+      type: String,
+      required: true,
+    },
+    iconTutorial: {
+      type: String,
+      required: true,
+    },
   },
 };
 </script>
 <template>
   <div class="tutorial-container">
-    <div class="tutorial-container-img"></div>
+    <div
+      :style="{ backgroundImage: `url(${backgroundImageTutorial})` }"
+      class="tutorial-container-img"
+    ></div>
     <div class="tutorial-container-section">
       <div class="tutorial-container-text">
         <div class="tutorial-container-title">
-          <div class="tutorial-title-icon">
-            <svg
+          <div
+            :style="{ backgroundImage: `url(${iconTutorial})` }"
+            class="svg-container tutorial-title-icon"
+          >
+            <!-- <svg
               width="74"
               height="74"
               viewBox="0 0 74 74"
@@ -100,41 +118,43 @@ export default {
                   />
                 </filter>
               </defs>
-            </svg>
+            </svg> -->
           </div>
           <h3>{{ h3Tutorial }}</h3>
         </div>
         <p>{{ textTutorial }}</p>
       </div>
-      <hoverButton class="lol">
+      <hoverButton backgroundColor="#3e3e3e">
         <p>{{ buttonTextTutorial }}</p>
       </hoverButton>
     </div>
   </div>
 </template>
 
-<style>
+<style scoped>
 .tutorial-container {
   width: 100%;
   height: 45vh;
+
   display: flex;
   justify-content: space-between;
-  flex-direction: row;
+  flex-direction: row-reverse;
   border-radius: 10px;
   background: var(--surface-surface-blur, rgba(255, 247, 247, 0.08));
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(17px);
+  margin-bottom: 5vh;
 }
 
 .tutorial-container-img,
 .tutorial-container-section {
-  margin: 10px 10% 10px 10px;
+  margin: 10px 10px 10px 2%;
   width: 50%;
 }
 
 .tutorial-container-img {
   width: 40%;
-  background-image: url("@/assets/img/card-img-test.webp");
+  /* background-image: url("@/assets/img/card-img-test.webp"); */
   background-size: cover;
   background-position: bottom center;
   background-repeat: no-repeat;
@@ -146,6 +166,7 @@ export default {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+  padding: 5px 0 15px 0;
 }
 
 .tutorial-container-text {
@@ -163,5 +184,15 @@ export default {
 .tutorial-container-title h3 {
   margin-left: 2vw;
   margin-bottom: 25px;
+}
+
+.svg-container {
+  /* background-color: red; */
+  width: 10%;
+  aspect-ratio: 1/1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-flex;
+  align-items: center;
 }
 </style>

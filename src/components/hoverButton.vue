@@ -1,11 +1,20 @@
 <script>
 export default {
-  props: {},
+  name: "buttonColor",
+  props: {
+    backgroundColor: {
+      type: String,
+      default: "#2a2a2a",
+    },
+  },
 };
 </script>
 <template>
   <button class="hover-button">
-    <div class="hover-button-border">
+    <div
+      :style="{ backgroundColor: backgroundColor }"
+      class="hover-button-border"
+    >
       <slot></slot>
     </div>
   </button>
@@ -28,12 +37,18 @@ export default {
 .hover-button-border {
   border-radius: 50px;
   padding: 14px 40px;
-  background: #2a2a2a;
   box-shadow: 0px 0px 15.1px 0px rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(2px);
 }
 
 .hover-button-border:hover {
+  background-color: #3e3e3e;
+}
+
+.all-tutorial-button-p {
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
 }
 
 @keyframes hoverButtonOpacityIn {

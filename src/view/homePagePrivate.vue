@@ -1,19 +1,26 @@
 <script>
-import navigationBar from "@/components/navigationBar.vue";
+import headerSection from "@/components/headerSection.vue";
 import cardsMaterial from "@/components/cardsMaterial.vue";
 import coopSection from "@/components/coopSection.vue";
 import studioSection from "@/components/studioSection.vue";
 import doubleParagraph from "@/components/paragraphDouble.vue";
-import tutorialContainer from "@/components/tutorialContainer.vue";
+import tutorialContainerLeft from "@/components/tutorialContainerLeft.vue";
+import tutorialContainerRight from "@/components/tutorialContainerRight.vue";
+import allTutorialButton from "@/components/hoverButton.vue";
+import gradientBackgroundHomepagePrivate from "@/components/gradientHomepagePrivate.vue";
 
 export default {
   components: {
-    navigationBar,
+    headerSection,
     cardsMaterial,
     coopSection,
     studioSection,
     doubleParagraph,
-    tutorialContainer,
+    tutorialContainerLeft,
+    tutorialContainerRight,
+
+    allTutorialButton,
+    gradientBackgroundHomepagePrivate,
   },
   data() {
     return {};
@@ -22,8 +29,9 @@ export default {
 </script>
 
 <template>
-  <navigationBar />
-  <div class="slay"></div>
+  <gradientBackgroundHomepagePrivate />
+  <headerSection />
+
   <div class="studio-container">
     <h3>Studio</h3>
     <studioSection />
@@ -48,20 +56,67 @@ export default {
     buttonTextRight="Réserver"
   />
   <h3>Tutoriel: Enregistrement de voix ou bruitage</h3>
-  <tutorialContainer
+  <tutorialContainerLeft
     h3Tutorial="Installation"
-    textTutorial="Marche à suivre du branchement d’un micro et
-  d’un casque ainsi que l’enregistrement des voix ou des bruitages dans Logic
-  Audio."
+    textTutorial="Marche à suivre
+  du branchement d’un micro et d’un casque ainsi que l’enregistrement des voix
+  ou des bruitages dans Logic Audio."
     buttonTextTutorial="Voir le tutoriel"
+    :backgroundImageTutorial="require('@/assets/img/card-img-test.webp')"
+    :iconTutorial="require('@/assets/img/tutorial-icon-installation.svg')"
   />
 
-  <tutorialContainer
-    class="right-tutorial-container"
+  <tutorialContainerRight
     h3Tutorial="Mise en service"
-    textTutorial="Tutoriel pour l’alimentation électrique et la mise en marche des machines."
+    textTutorial="Tutoriel pour l’alimentation électrique et la mise en marche 
+    des machines."
     buttonTextTutorial="Voir le tutoriel"
+    backgroundColor="blue"
+    :backgroundImageTutorial="require('@/assets/img/card-img-test.webp')"
+    :iconTutorial="require('@/assets/img/tutorial-icon-service.svg')"
   />
+
+  <tutorialContainerLeft
+    h3Tutorial="Utilisation du monitoring"
+    textTutorial="Tutoriel pour retarder le monitoring audio afin de rétablir 
+    la synchronisation avec la TV."
+    buttonTextTutorial="Voir le tutoriel"
+    :backgroundImageTutorial="require('@/assets/img/card-img-test.webp')"
+    :iconTutorial="require('@/assets/img/tutorial-icon-monitoring.svg')"
+  />
+
+  <tutorialContainerRight
+    h3Tutorial="Réglages"
+    textTutorial="Tutoriel concernant le réglage du micro, des casques et 
+    monitoring en plus du fonctionnement du talkback. "
+    buttonTextTutorial="Voir le tutoriel"
+    backgroundColor="blue"
+    :backgroundImageTutorial="require('@/assets/img/card-img-test.webp')"
+    :iconTutorial="require('@/assets/img/tutorial-icon-settings.svg')"
+  />
+
+  <tutorialContainerLeft
+    h3Tutorial="Exportation des données"
+    textTutorial="Tutoriel qui explique toutes les étapes d’exportation après 
+    l’enregistrement de votre projet."
+    buttonTextTutorial="Voir le tutoriel"
+    :backgroundImageTutorial="require('@/assets/img/card-img-test.webp')"
+    :iconTutorial="require('@/assets/img/tutorial-icon-export.svg')"
+  />
+
+  <tutorialContainerRight
+    h3Tutorial="Fin de séance"
+    textTutorial="La marche à suivre pour toutes les fins de séances, 
+    c’est-à-dire la fermeture des applications ainsi que le rangement du studio.
+    "
+    buttonTextTutorial="Voir le tutoriel"
+    backgroundColor="blue"
+    :backgroundImageTutorial="require('@/assets/img/card-img-test.webp')"
+    :iconTutorial="require('@/assets/img/tutorial-icon-end.svg')"
+  />
+  <allTutorialButton class="yo" backgroundColor="#292626">
+    <p class="all-tutorial-button-p">Voir tous les tutoriels</p>
+  </allTutorialButton>
 
   <div class="slay"></div>
 </template>
@@ -69,7 +124,7 @@ export default {
 <style scoped>
 .slay {
   height: 100vh;
-  background-color: #191919;
+  /* background-color: #191919; */
 }
 
 .right-tutorial-container {

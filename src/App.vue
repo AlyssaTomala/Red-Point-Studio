@@ -1,5 +1,15 @@
-<script setup></script>
+<script>
+import navigationBar from "@/components/navigationBar.vue";
+
+export default {
+  components: {
+    navigationBar,
+  },
+};
+</script>
+
 <template>
+  <navigationBar />
   <router-view :key="$route.fullPath"></router-view>
 </template>
 

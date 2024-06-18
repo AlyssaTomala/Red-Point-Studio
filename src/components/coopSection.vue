@@ -1,5 +1,5 @@
 <script>
-import paragraphLong from "@/components/paragraphLong.vue";
+import paragraphLong from "./paragraphLong.vue";
 
 export default {
   components: {
