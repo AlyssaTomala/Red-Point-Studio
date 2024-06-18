@@ -8,6 +8,9 @@ import tutorialContainerLeft from "@/components/tutorialContainerLeft.vue";
 import tutorialContainerRight from "@/components/tutorialContainerRight.vue";
 import allTutorialButton from "@/components/hoverButton.vue";
 import gradientBackgroundHomepagePrivate from "@/components/gradientHomepagePrivate.vue";
+import footerSection from "@/components/footerSectionPrivate.vue";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default {
   components: {
@@ -20,10 +23,44 @@ export default {
     tutorialContainerRight,
 
     allTutorialButton,
+    footerSection,
     gradientBackgroundHomepagePrivate,
   },
   data() {
     return {};
+  },
+  mounted() {
+    gsap.registerPlugin(ScrollTrigger);
+    this.tutorialContainerAnimationLeft();
+  },
+
+  methods: {
+    tutorialContainerAnimationLeft() {
+      const classes = [
+        ".tutorial-container-installation",
+        ".tutorial-container-service",
+        ".tutorial-container-monitoring",
+        ".tutorial-container-settings",
+        ".tutorial-container-export",
+        ".tutorial-container-end",
+      ];
+
+      classes.forEach((cls) => {
+        gsap.from(cls, {
+          scrollTrigger: {
+            trigger: cls,
+            start: "top bottom",
+            end: "top center",
+            scrub: 1,
+          },
+          y: 80,
+          opacity: 0,
+          ease: "power3.out",
+          duration: 2,
+          delay: 0.5,
+        });
+      });
+    },
   },
 };
 </script>
@@ -57,6 +94,7 @@ export default {
   />
   <h3>Tutoriel: Enregistrement de voix ou bruitage</h3>
   <tutorialContainerLeft
+    class="tutorial-container-installation"
     h3Tutorial="Installation"
     textTutorial="Marche à suivre
   du branchement d’un micro et d’un casque ainsi que l’enregistrement des voix
@@ -67,6 +105,7 @@ export default {
   />
 
   <tutorialContainerRight
+    class="tutorial-container-service"
     h3Tutorial="Mise en service"
     textTutorial="Tutoriel pour l’alimentation électrique et la mise en marche 
     des machines."
@@ -77,6 +116,7 @@ export default {
   />
 
   <tutorialContainerLeft
+    class="tutorial-container-monitoring"
     h3Tutorial="Utilisation du monitoring"
     textTutorial="Tutoriel pour retarder le monitoring audio afin de rétablir 
     la synchronisation avec la TV."
@@ -86,6 +126,7 @@ export default {
   />
 
   <tutorialContainerRight
+    class="tutorial-container-settings"
     h3Tutorial="Réglages"
     textTutorial="Tutoriel concernant le réglage du micro, des casques et 
     monitoring en plus du fonctionnement du talkback. "
@@ -96,6 +137,7 @@ export default {
   />
 
   <tutorialContainerLeft
+    class="tutorial-container-export"
     h3Tutorial="Exportation des données"
     textTutorial="Tutoriel qui explique toutes les étapes d’exportation après 
     l’enregistrement de votre projet."
@@ -105,6 +147,7 @@ export default {
   />
 
   <tutorialContainerRight
+    class="tutorial-container-end"
     h3Tutorial="Fin de séance"
     textTutorial="La marche à suivre pour toutes les fins de séances, 
     c’est-à-dire la fermeture des applications ainsi que le rangement du studio.
@@ -117,17 +160,7 @@ export default {
   <allTutorialButton class="yo" backgroundColor="#292626">
     <p class="all-tutorial-button-p">Voir tous les tutoriels</p>
   </allTutorialButton>
-
-  <div class="slay"></div>
+  <footerSection class="lol" />
 </template>
 
-<style scoped>
-.slay {
-  height: 100vh;
-  /* background-color: #191919; */
-}
-
-.right-tutorial-container {
-  flex-direction: row-reverse;
-}
-</style>
+<style scoped></style>

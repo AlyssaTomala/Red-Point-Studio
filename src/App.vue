@@ -26,6 +26,10 @@ html {
   margin: 0 5%;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 h1,
 h2,
 h3,

@@ -1,4 +1,42 @@
-<script></script>
+<script>
+import { gsap } from "gsap";
+import { SplitText } from "gsap/SplitText";
+
+// Enregistrez le plugin SplitText
+gsap.registerPlugin(SplitText);
+
+export default {
+  mounted() {
+    this.animateHeaderP();
+    this.redPointAnimaiton();
+  },
+  methods: {
+    redPointAnimaiton() {
+      gsap.from(".header-container svg", {
+        duration: 1,
+        scale: 0,
+        opacity: 0,
+        delay: 0.2,
+        ease: "power3.out",
+      });
+    },
+    animateHeaderP() {
+      const splitText = new SplitText(".header-h1-container p", {
+        type: "chars",
+      });
+
+      gsap.from(splitText.chars, {
+        duration: 0.2,
+        opacity: 0,
+        y: 8,
+        ease: "power3.out",
+        stagger: 0.04,
+      });
+    },
+  },
+};
+</script>
+
 <template>
   <div class="header-container">
     <div class="header-background-container">

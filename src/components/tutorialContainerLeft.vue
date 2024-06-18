@@ -69,16 +69,15 @@ export default {
   justify-content: space-between;
   flex-direction: row;
   border-radius: 10px;
-
-  background: var(--surface-surface-blur, rgba(255, 247, 247, 0.08));
+  background: var(--surface-surface-blur, rgba(41, 41, 41, 0.5));
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-  backdrop-filter: blur(17px);
+  backdrop-filter: blur(20px);
   margin-bottom: 5vh;
 }
 
 .tutorial-container-img,
 .tutorial-container-section {
-  margin: 10px 10% 10px 10px;
+  margin: 18px 10% 18px 18px;
   width: 50%;
 }
 
@@ -96,7 +95,7 @@ export default {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 5px 0 15px 0;
+  padding: 5px 0 10px 0;
 }
 
 .tutorial-container-text {

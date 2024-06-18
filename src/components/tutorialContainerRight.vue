@@ -124,7 +124,8 @@ export default {
         </div>
         <p>{{ textTutorial }}</p>
       </div>
-      <hoverButton backgroundColor="#3e3e3e">
+      <hoverButton backgroundColor="#3e3e3e" class="border-button">
+        <div class="tutorial-hover-color-button"></div>
         <p>{{ buttonTextTutorial }}</p>
       </hoverButton>
     </div>
@@ -140,15 +141,15 @@ export default {
   justify-content: space-between;
   flex-direction: row-reverse;
   border-radius: 10px;
-  background: var(--surface-surface-blur, rgba(255, 247, 247, 0.08));
+  background: var(--surface-surface-blur, rgba(41, 41, 41, 0.5));
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-  backdrop-filter: blur(17px);
+  backdrop-filter: blur(30px);
   margin-bottom: 5vh;
 }
 
 .tutorial-container-img,
 .tutorial-container-section {
-  margin: 10px 10px 10px 2%;
+  margin: 18px 18px 18px 2%;
   width: 50%;
 }
 
@@ -194,5 +195,26 @@ export default {
   background-size: cover;
   display: inline-flex;
   align-items: center;
+}
+
+.border-button p {
+  position: relative;
+  z-index: 10;
+}
+
+.border-button:hover .tutorial-hover-color-button {
+  /* background-color: #3e3e3e63; */
+  /* background: linear-gradient(30deg, #433a3a -3.1%, #323232 92.29%); */
+}
+
+.tutorial-hover-color-button {
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  border-radius: 222px;
+  z-index: 2;
+  /* background-color: #ac4c4cf0; */
 }
 </style>
