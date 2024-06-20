@@ -56,11 +56,17 @@ h4 {
   font-size: 24px;
 }
 
-p {
+p,
+h5 {
   font-family: "Qanelas";
   font-weight: 400;
   color: #fff;
   font-size: 18px;
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: 500;
 }
 
 a {
