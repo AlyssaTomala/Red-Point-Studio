@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import homePagePublic from "@/view/homePagePublic.vue";
 import homePagePrivate from "@/view/homePagePrivate.vue";
-
 import tutoUse from "@/view/tutoUse.vue";
 import tutoSettings from "@/view/tutoSettings.vue";
 import tutoService from "@/view/tutoService.vue";
@@ -11,8 +12,12 @@ import summaryPage from "@/view/summaryPage.vue";
 import infosPage from "@/view/infosPage.vue";
 
 const routes = [
-  { path: "/", component: homePagePrivate, name: "homePagePrivate" },
-
+  { path: "/", component: homePagePublic, name: "homePagePublic" },
+  {
+    path: "/homePagePrivate",
+    component: homePagePrivate,
+    name: "homePagePrivate",
+  },
   { path: "/tutoUse", component: tutoUse, name: "tutoUse" },
   { path: "/tutoSettings", component: tutoSettings, name: "tutoSettings" },
   { path: "/tutoService", component: tutoService, name: "tutoService" },
@@ -28,11 +33,26 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(process.env.BASE_URL),
   routes,
-  scrollBehavior() {
-    return { top: 0 };
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition;
+    } else if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: "smooth",
+      };
+    } else {
+      return { top: 0 };
+    }
   },
+});
+
+router.afterEach(() => {
+  setTimeout(() => {
+    ScrollTrigger.refresh();
+  }, 1000);
 });
 
 export default router;

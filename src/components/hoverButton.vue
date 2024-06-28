@@ -1,32 +1,66 @@
+<template>
+  <div>
+    <!-- Prioritize router-link if both props are provided -->
+    <router-link
+      v-if="hoverButtonRouter"
+      :to="hoverButtonRouter"
+      class="hover-button"
+    >
+      <div
+        :style="{ backgroundColor: backgroundColor }"
+        class="hover-button-border"
+      >
+        <slot></slot>
+      </div>
+    </router-link>
+    <!-- Render <a> tag only if hoverButtonRouter is not provided and hoverButtonA is available -->
+    <a
+      v-else-if="hoverButtonA"
+      :href="hoverButtonA"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="hover-button"
+    >
+      <div
+        :style="{ backgroundColor: backgroundColor }"
+        class="hover-button-border"
+      >
+        <slot></slot>
+      </div>
+    </a>
+    <!-- Optional: add a fallback or error handling if neither is provided -->
+  </div>
+</template>
+
 <script>
 export default {
-  name: "buttonColor",
+  name: "HoverButton",
   props: {
     backgroundColor: {
       type: String,
       default: "#2a2a2a",
     },
+    hoverButtonRouter: {
+      type: [String, Object],
+      default: null,
+    },
+    hoverButtonA: {
+      type: String,
+      default: "",
+    },
   },
 };
 </script>
-<template>
-  <button class="hover-button">
-    <div
-      :style="{ backgroundColor: backgroundColor }"
-      class="hover-button-border"
-    >
-      <slot></slot>
-    </div>
-  </button>
-</template>
 
 <style>
 .hover-button {
+  display: inline-block;
   margin-top: 5vh;
   padding: 1.5px 1.5px;
   border-radius: 50px;
   background-color: rgba(255, 0, 0, 0);
   border: none;
+  text-decoration: none;
 }
 
 .hover-button:hover {
@@ -51,6 +85,5 @@ export default {
   font-weight: 500;
 }
 
-@keyframes hoverButtonOpacityIn {
-}
+/* @keyframes not in use can be removed unless needed for future animation */
 </style>

@@ -126,7 +126,6 @@ export default {
   justify-content: space-between;
   align-items: center;
   height: min-content;
-  /* background-color: rgb(111, 111, 180); */
 }
 .card-container {
   width: 17%;
@@ -135,7 +134,6 @@ export default {
   justify-content: center;
   align-items: center;
   border-radius: 8px;
-
   border: 0.5px solid var(--color-grey-800, #343434);
   background: var(--color-brand-Backgroundblur, rgba(255, 247, 247, 0.08));
   box-shadow: 0px 0px 15.1px 0px rgba(0, 0, 0, 0.15);
@@ -153,28 +151,35 @@ export default {
   font-size: 20px;
 }
 
+.card-img-mics {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000e7 100%),
+    url(/src/assets/img/card-img-mic.webp);
+}
+.card-img-interface {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000e7 100%),
+    url(/src/assets/img/card-img-interface.webp);
+}
+.card-img-speakers {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000e7 100%),
+    url(/src/assets/img/card-img-speakers.webp);
+}
+.card-img-logiciels {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000e7 100%),
+    url(/src/assets/img/card-img-logiciel.webp);
+}
+.card-img-plugins {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000e7 100%),
+    url(/src/assets/img/card-img-plugin.webp);
+}
+
 .card-img-container {
   width: 100%;
   height: 100%;
   margin: 7px;
-  /* background-color: rgb(255, 255, 255); */
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%),
-    url(/src/assets/img/card-img-test.webp);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 6.5px;
-}
-
-.card-img-mics {
-}
-.card-img-interface {
-}
-.card-img-speakers {
-}
-.card-img-logiciels {
-}
-.card-img-plugins {
 }
 
 .card-img-hover-container {
