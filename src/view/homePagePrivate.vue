@@ -73,14 +73,7 @@ export default {
   <div class="studio-container">
     <h3>Studio</h3>
     <privateBoxText
-      boxTextOnlyContent="Construit en 2023, le Red Point Studio est un studio de 
-    mixage musique et cinéma coopératif de très haute qualité situé à Fribourg, 
-    Suisse. L’infrastructure comprend une régie de 20 m2 qui accueille 
-    confortablement 5 à 6 personnes et une cabine de prise de son de 12 m2 
-    destinée à la prise de son de voix, de bruitage ou d’instruments solos. 
-    Le design acoustique est signé Delphine Bard. La régie est équipée d’un 
-    système 5.1 PSI audio et d’une interface audionumérique Merging Horus 16 in 
-    8 out."
+      boxTextOnlyContent="Construit en 2023, le Red Point Studio est un studio de mixage musique et cinéma coopératif de très haute qualité situé à Fribourg, Suisse. L’infrastructure comprend une régie de 20 m2 qui accueille confortablement 5 à 6 personnes et une cabine de prise de son de 12 m2 destinée à la prise de son de voix, de bruitage ou d’instruments solos. Le design acoustique est signé Delphine Bard. La régie est équipée d’un système 5.1 PSI audio et d’une interface audionumérique Merging Horus 16 in 8 out."
     />
   </div>
   <div class="coop-container">
@@ -96,10 +89,7 @@ export default {
     class="private-page-double-paragraph"
     boxTextDuoTitleLeft="Informations pratiques"
     boxTextDuoTitleRight="Réservation"
-    boxTextDuoLeft="Voici toutes les
-  informations essentielles concernant le Red Point Studio : horaires et tarifs,
-  collaborateurs, contacts utiles, et détails sur l'accessibilité de notre
-  lieu."
+    boxTextDuoLeft="Voici toutes les informations essentielles concernant le Red Point Studio : horaires et tarifs, collaborateurs, contacts utiles, et détails sur l'accessibilité de notre lieu."
     boxTextDuoRight="Pour réserver le studio, veuillez contacter le
   responsable par téléphone."
     buttonTextLeft="Se renseigner"
@@ -111,10 +101,8 @@ export default {
   <h3 id="tutorialSection">Tutoriel : Enregistrement de voix ou bruitage</h3>
   <privateCaseTutoLeft
     class="tutorial-container-installation"
-    h3Tutorial="Installation"
-    textTutorial="Marche à suivre
-  du branchement d’un micro et d’un casque ainsi que l’enregistrement des voix
-  ou des bruitages dans Logic Audio."
+    h3Tutorial="1. Installation"
+    textTutorial="Marche à suivre du branchement d’un micro et d’un casque ainsi que l’enregistrement des voix ou des bruitages dans Logic Audio."
     buttonTextTutorial="Voir le tutoriel"
     hoverButtonRouter="/tutoInstallation"
     :backgroundImageTutorial="
@@ -125,7 +113,7 @@ export default {
 
   <privateCaseTutoRight
     class="tutorial-container-service"
-    h3Tutorial="Mise en service"
+    h3Tutorial="2. Mise en service"
     textTutorial="Tutoriel pour l’alimentation électrique et la mise en marche 
     des machines."
     buttonTextTutorial="Voir le tutoriel"
@@ -138,7 +126,7 @@ export default {
 
   <privateCaseTutoLeft
     class="tutorial-container-monitoring"
-    h3Tutorial="Utilisation du monitoring"
+    h3Tutorial="3. Utilisation du monitoring"
     textTutorial="Tutoriel pour retarder le monitoring audio afin de rétablir 
     la synchronisation avec la TV."
     buttonTextTutorial="Voir le tutoriel"
@@ -151,7 +139,7 @@ export default {
 
   <privateCaseTutoRight
     class="tutorial-container-settings"
-    h3Tutorial="Réglages"
+    h3Tutorial="4. Réglages"
     textTutorial="Tutoriel concernant le réglage du micro, des casques et 
     monitoring en plus du fonctionnement du talkback. "
     buttonTextTutorial="Voir le tutoriel"
@@ -164,7 +152,7 @@ export default {
 
   <privateCaseTutoLeft
     class="tutorial-container-export"
-    h3Tutorial="Exportation des données"
+    h3Tutorial="5. Exportation des données"
     textTutorial="Tutoriel qui explique toutes les étapes d’exportation après 
     l’enregistrement de votre projet."
     buttonTextTutorial="Voir le tutoriel"
@@ -177,7 +165,7 @@ export default {
 
   <privateCaseTutoRight
     class="tutorial-container-end"
-    h3Tutorial="Fin de séance"
+    h3Tutorial="6. Fin de séance"
     textTutorial="La marche à suivre pour toutes les fins de séances, 
     c’est-à-dire la fermeture des applications ainsi que le rangement du studio.
     "

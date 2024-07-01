@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- Prioritize router-link if both props are provided -->
     <router-link
       v-if="hoverButtonRouter"
       :to="hoverButtonRouter"
@@ -13,7 +12,7 @@
         <slot></slot>
       </div>
     </router-link>
-    <!-- Render <a> tag only if hoverButtonRouter is not provided and hoverButtonA is available -->
+
     <a
       v-else-if="hoverButtonA"
       :href="hoverButtonA"
@@ -28,7 +27,6 @@
         <slot></slot>
       </div>
     </a>
-    <!-- Optional: add a fallback or error handling if neither is provided -->
   </div>
 </template>
 

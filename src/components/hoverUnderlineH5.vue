@@ -1,6 +1,8 @@
 <template>
   <h5>
-    <a :href="navBarUrl" class="effect-underline">{{ navBarText }}</a>
+    <router-link :to="navBarUrl" class="effect-underline">
+      {{ navBarText }}</router-link
+    >
   </h5>
 </template>
 <script>

@@ -19,13 +19,7 @@ export default {
   </div>
   <h3>{{ titleContent }}</h3>
   <textContent
-    boxTextOnlyContent="Le Red Point Studio appartient à la société coopérative 
-    Audibility. Ses 7 membres actuels sont ingénieurs du son, sound designers, 
-    musiciens, réalisateurs ou producteur de cinéma. Chaque membre peut en tout 
-    temps utiliser le studio pour ses propres projets à un tarif extrêmement 
-    avantageux. N’importe qui peut devenir membre de la Coopérative et devenir 
-    utilisateur du Red Point studio. Pour en savoir plus, contactez un des 
-    membres du comité."
+    boxTextOnlyContent="Le Red Point Studio appartient à la société coopérative Audibility. Ses 7 membres actuels sont ingénieurs du son, sound designers, musiciens, réalisateurs ou producteur de cinéma. Chaque membre peut en tout temps utiliser le studio pour ses propres projets à un tarif extrêmement avantageux. N’importe qui peut devenir membre de la Coopérative et devenir utilisateur du Red Point studio. Pour en savoir plus, contactez un des membres du comité."
   />
 </template>
 

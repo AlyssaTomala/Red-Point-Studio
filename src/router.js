@@ -41,7 +41,6 @@ const router = createRouter({
     } else if (to.hash) {
       return {
         el: to.hash,
-        behavior: "smooth",
       };
     } else {
       return { top: 0 };

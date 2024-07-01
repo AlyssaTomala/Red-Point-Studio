@@ -34,7 +34,7 @@ export default {
 <template>
   <div class="navbar-container">
     <div class="navbar-logo">
-      <a href="/homePagePrivate#top">
+      <router-link to="/homePagePrivate">
         <svg
           width="147"
           height="33"
@@ -131,7 +131,7 @@ export default {
             </clipPath>
           </defs>
         </svg>
-      </a>
+      </router-link>
     </div>
     <div class="navbar-links">
       <effectUnderline
@@ -149,8 +149,52 @@ export default {
 </template>
 
 <style scoped>
+.navbar-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 247, 247, 0);
+  backdrop-filter: blur(0px);
+  height: 7vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+}
+
 .navbar-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   margin-right: 3.5%;
   width: 30%;
+}
+
+.navbar-logo {
+  padding-left: 3.5%;
+}
+
+.navbar-guest:hover button {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.navbar-guest:hover p {
+  font-weight: 500;
+}
+
+.navbar-guest p {
+  font-size: 12px;
+  padding-top: 2px;
+  opacity: 0.9;
+}
+
+.navbar-guest button {
+  background-color: transparent;
+  border: none;
+  opacity: 0.9;
 }
 </style>

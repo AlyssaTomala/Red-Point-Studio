@@ -107,6 +107,15 @@ export default {
         <p>L'art du son en coopérative</p>
       </div>
     </div>
+    <div class="header-background-video">
+      <video
+        src="@/assets/img/background-header.webm"
+        autoplay
+        loop
+        muted
+        playsinline
+      ></video>
+    </div>
   </div>
 </template>
 
@@ -119,7 +128,8 @@ export default {
 .header-background-container {
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(180deg, #191919 0%, #862929 100%);
+  background: linear-gradient(180deg, #19191900 0%, #191919 95%);
+
   position: absolute;
   top: 0;
   left: 0;
@@ -127,6 +137,16 @@ export default {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+.header-background-video video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  top: -2vh;
+  left: 0;
+  object-fit: cover;
 }
 .header-h1-container {
   display: flex;

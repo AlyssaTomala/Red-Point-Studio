@@ -134,7 +134,7 @@ export default {
       <div class="specific-step-container">
         <stepTextContent
           id="serviceStepFive"
-          paragraphTextContentTitle="5 Mise en service de l’ordinateur et lancement de logic"
+          paragraphTextContentTitle="5. Mise en service de l’ordinateur et lancement de logic"
           paragraphTextContent="<span class='bold-large'>5.1</span> Connectez-vous sur le compte qui vous est destiné en utilisant le mot de passe qui vous a été communiqué.
         
           <span class='bold-large'>5.2</span> Pour les élèves de eikon, demandez le mot de passe au secrétariat ou à votre responsable.

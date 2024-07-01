@@ -256,6 +256,7 @@ export default {
               </defs>
             </svg>
           </router-link>
+          <img class="ofc-logo" src="@/assets/img/ofc-logo.webp" alt="" />
         </div>
       </div>
       <div class="footer-navigation-columns-container">
@@ -267,7 +268,7 @@ export default {
           />
           <effectUnderline
             navBarText="Réservation"
-            navBarUrl="/homePagePrivate#contact"
+            navBarUrl="/homePagePrivate#navPrivateAcces"
           />
           <effectUnderline
             navBarText="Informations pratiques"
@@ -312,6 +313,7 @@ export default {
 .footer-container {
   width: 100vw;
   height: 80vh;
+
   background: rgba(120, 120, 120, 0.12);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(40px);
@@ -345,7 +347,7 @@ export default {
 .footer-logo-audability {
   display: flex;
   align-items: flex-end;
-  width: 100%;
+  width: 60%;
   height: 50%;
   scale: 1.2;
   transform-origin: bottom left;
@@ -361,6 +363,11 @@ export default {
   transform-origin: top left;
 }
 
+.ofc-logo {
+  scale: 0.25;
+  transform-origin: bottom left;
+  padding-left: 5vw;
+}
 .footer-navigation-columns-container {
   width: 50%;
   height: auto;

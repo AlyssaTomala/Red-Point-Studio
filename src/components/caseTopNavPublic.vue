@@ -1,12 +1,9 @@
 <script>
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import effectUnderline from "@/components/hoverUnderlineP.vue";
 
 export default {
-  components: {
-    effectUnderline,
-  },
+  components: {},
   data() {
     return {};
   },
@@ -34,7 +31,7 @@ export default {
 <template>
   <div class="navbar-container">
     <div class="navbar-logo">
-      <a href="/homePagePrivate#top">
+      <router-link to="/">
         <svg
           width="147"
           height="33"
@@ -131,17 +128,12 @@ export default {
             </clipPath>
           </defs>
         </svg>
-      </a>
-    </div>
-    <div class="navbar-links">
-      <effectUnderline navBarText="Le studio" navBarUrl="#navPublicStudio" />
-      <effectUnderline navBarText="Matériel" navBarUrl="#navPublicMateriel" />
-      <effectUnderline navBarText="Contact" navBarUrl="#navPublicAcces" />
+      </router-link>
     </div>
   </div>
 </template>
 
-<style>
+<style scoped>
 .navbar-container {
   display: flex;
   flex-direction: row;

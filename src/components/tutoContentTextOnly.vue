@@ -101,7 +101,7 @@ export default {
 }
 
 .text-warning {
-  color: red;
+  color: rgb(255, 73, 48);
 }
 
 .textimg-right-img-container {

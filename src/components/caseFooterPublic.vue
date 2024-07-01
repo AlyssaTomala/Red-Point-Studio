@@ -252,6 +252,7 @@ export default {
               </defs>
             </svg>
           </router-link>
+          <img class="ofc-logo" src="@/assets/img/ofc-logo.webp" alt="" />
         </div>
       </div>
     </div>
@@ -265,11 +266,11 @@ export default {
 <style scoped>
 .footer-container-public {
   width: 100vw;
-  height: 50vh;
+  height: 70vh;
 }
 
 .footer-copyright-container {
-  height: 8vh;
+  height: 5vh;
   width: 100%;
 }
 </style>

@@ -10,13 +10,9 @@ export default {
   props: {
     navBarText: {
       type: String,
-      required: true,
-      default: "",
     },
     navBarUrl: {
       type: [String, Object],
-      required: true,
-      default: "",
     },
   },
 };

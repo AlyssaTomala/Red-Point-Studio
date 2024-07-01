@@ -36,6 +36,7 @@ h4 {
 
 h1 {
   font-size: 60px;
+  text-shadow: 0px 0px 30.6px rgba(0, 0, 0, 0.5);
 }
 
 h2 {
@@ -141,6 +142,12 @@ a {
 }
 .title-step-container {
   padding: 2vh 0;
+}
+
+.anchor {
+  position: relative;
+  top: -200px;
+  padding-top: 200px;
 }
 </style>
 

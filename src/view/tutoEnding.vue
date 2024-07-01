@@ -54,6 +54,7 @@ export default {
   </div>
   <div class="tutorial-content-container">
     <tutorialEnding
+      id="endingStepOne"
       tutorialIntroductionTitle="6. Fin de séance"
       tutorialIntroductionText="
       La marche à suivre pour toutes les fins de séances, c’est-à-dire la fermeture des applications ainsi que le rangement du studio."

@@ -9,6 +9,9 @@ export default {
   mounted() {
     gsap.registerPlugin(ScrollTrigger);
     this.cardAnimation();
+    this.$nextTick(() => {
+      ScrollTrigger.refresh();
+    });
   },
 
   methods: {
@@ -16,11 +19,11 @@ export default {
       gsap.from(".card-container", {
         scrollTrigger: {
           trigger: ".card-container",
-          start: "-10% 100%",
-          end: "-10% 20%",
-          scrub: 1,
+          start: "top 90%",
+          end: "top top",
+          scrub: true,
         },
-        y: 100,
+        y: 150,
         opacity: 0,
         stagger: 0.5,
         duration: 4.5,
